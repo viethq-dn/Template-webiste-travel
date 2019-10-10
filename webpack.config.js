@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const CssUrlRelativePlugin = require('css-url-relative-plugin');
 const glob = require('glob');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const IS_DEV = process.env.NODE_ENV === 'dev';
 
@@ -95,6 +96,7 @@ const config = {
       include: 'initial',
     }),
     new CssUrlRelativePlugin(),
+    new StylelintPlugin(),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'src'),
