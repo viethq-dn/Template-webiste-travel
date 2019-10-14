@@ -16,7 +16,7 @@ const config = {
   devtool: IS_DEV ? 'eval' : 'source-map',
   entry: './src/js/index.js',
   output: {
-    filename: 'js/main.js',
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
