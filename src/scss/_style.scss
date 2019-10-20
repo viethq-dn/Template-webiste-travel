@@ -2,155 +2,404 @@
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 20px;
-}
 
+    @include breakpoint(xs) {
+        padding: 0 8px;
+    }
+    &--clear {
+        padding: 0;
+    }
+}
+section {
+    & + & {
+        margin-top: 80px;
+
+        @include breakpoint(xs) {
+            margin-top: 40px;
+        }
+    }
+}
 .mv {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    height: 420px;
+    height: 360px;
     margin-top: -50px;
     background: url('../public/images/image_4.jpg') top center;
 
+    @include breakpoint(xs) {
+        height: 300px;
+    }
     .slogan {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         width: 1024px;
         margin: 0 auto;
-
-        &_inner {
+        &__inner {
             max-width: 500px;
-        }
 
-        h1 {
+            @include breakpoint(xs) {
+                padding: 20px;
+            }
+        }
+        &__title {
             font-family: 'Kaushan Script', cursive;
             font-size: 4.5rem;
         }
-
-        p {
+        &_des {
             font-size: 1.8rem;
         }
     }
 }
-
 main {
     min-height: 1000px;
 }
-
-.form_booking {
+.form-booking {
     display: flex;
     align-content: flex-end;
-    height: 115px;
-    margin-top: -115px;
-    background-color: #fff;
+    background-color: rgba($color: $text, $alpha: 0.1);
 
-    .title {
+    @include breakpoint(xs) {
+        flex-direction: column;
+    }
+    &__title {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 20px;
         background-color: $text;
-
         p {
             color: #fff;
             font-size: 1.8rem;
             font-weight: bold;
             line-height: 1;
         }
-
         span,
         b {
             display: block;
         }
-
         span {
             font-weight: normal;
         }
     }
+    &__body {
+        display: flex;
+        width: 100%;
 
-    .item {
+        @include breakpoint(xs) {
+            flex-direction: column;
+            padding: 16px 0;
+        }
+
+        @include breakpoint(sm) {
+            flex-wrap: wrap;
+        }
+    }
+    &__item {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 20px;
-    }
 
-    span.item-text {
+        @include breakpoint(xs) {
+            padding: 8px 16px;
+        }
+
+        @include breakpoint(sm) {
+            box-sizing: border-box;
+            width: 50%;
+            padding: 8px;
+        }
+    }
+    &__item-text {
         display: flex;
         align-items: flex-end;
         height: 60px;
         padding: 20px 0;
     }
-
-    .form-control {
+    &__control {
         display: flex;
         width: 100%;
-
         input[type="text"] {
             box-sizing: content-box;
             width: 100%;
             height: 36px;
             padding: 4px 8px;
-            border: 1px solid $text;
+            border: 1px solid rgba($text, 0.2);
             outline: none;
             box-shadow: none;
             font-size: 1.4rem;
         }
     }
-}
+    &__button {
+        display: flex;
+        position: relative;
+        width: 40px;
+        height: 100%;
+        border: none;
+        outline: none;
+        background-color: $text;
 
+        @include breakpoint(xs) {
+            width: 100%;
+            height: 60px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            margin: -8px auto auto -8px;
+            background: url(../public/images/icon_arow.png) center center/contain no-repeat;
+        }
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+}
 //title
-
-.ttl-h1 {
-    &_why {
-        margin: 32px auto 40px;
-        font-family: 'Kaushan Script', cursive;
-        font-size: 2rem;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    &_denstination {
-        margin: 0 auto 8px;
-        font-family: 'Kaushan Script', cursive;
-        font-size: 2rem;
-        line-height: 1;
-        text-align: center;
-        text-transform: uppercase;
-    }
-}
-
-.ttl-block {
-    margin-top: 40px;
+.title {
+    margin: 0 auto 16px;
     text-align: center;
+    &__ttl {
+        margin: 0;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__des {
+        color: rgba($text, 0.8);
+    }
 }
-
 //list
 .list-why {
     display: flex;
     list-style: none;
 
-    li {
-        figure {
-            width: 120px;
-            margin: 0 auto;
+    @include breakpoint(xs) {
+        flex-direction: column;
+        width: 100%;
+    }
+    &__item {
+        width: 33.333%;
 
-            img {
-                width: 100%;
+        @include breakpoint(xs) {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            & + & {
+                margin-top: 8px;
             }
         }
     }
-
-    &_title {
+    &__text {
         margin-top: 8px;
+        text-align: center;
+
+        @include breakpoint(xs) {
+            margin-top: 0;
+            margin-left: 16px;
+            text-align: left;
+        }
+    }
+    &__figure {
+        width: 120px;
+        margin: 0 auto;
+
+        @include breakpoint(xs) {
+            margin: 0;
+        }
+    }
+    &__title {
         font-size: 1.8rem;
         font-weight: bold;
+    }
+    &__des {
+        color: rgba($text, 0.8);
+    }
+}
+//box
+.box-type01 {
+    $this: &;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__item {
+        position: relative;
+        box-sizing: content-box;
+        width: 33.3333%;
+        overflow: hidden;
+
+        @include breakpoint(xs) {
+            width: 50%;
+        }
+
+        @include breakpoint(xs2) {
+            width: 100%;
+        }
+    }
+    &__link {
+        display: block;
+        padding: 4px;
+        color: #fff;
+        &:hover {
+            #{$this}__img-zoom {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__figure {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#000, 0.3);
+        }
+    }
+    &__img-zoom {
+        transition: transform 500ms ease;
+    }
+    &__text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+    }
+    &__price {
+        color: #fff;
+    }
+    &__local {
+        font-size: 2rem;
+    }
+}
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background: url('../public/images/image_11.png') bottom center/cover no-repeat;
+    &__text {
+        margin: 0 auto;
         text-align: center;
     }
+    &__title {
+        font-size: 4rem;
+        font-weight: bold;
 
-    &_des {
-        text-align: center;
+        @include breakpoint(xs) {
+            font-size: 3.2rem;
+        }
+    }
+    &__des {
+        font-size: 2rem;
+    }
+    &__link--modal {
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin: 16px auto 0;
+        border-radius: 50%;
+        background: #fff url('../public/images/icon_04.png') center/contain  no-repeat;
+    }
+}
+.new {
+    $this: &;
+
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+        position: relative;
+        box-sizing: border-box;
+        width: 33.333%;
+        padding: 8px;
+
+        @include breakpoint(xs) {
+            width: 50%;
+        }
+
+        @include breakpoint(xs2) {
+            width: 100%;
+        }
+        &:hover {
+            #{$this}__link--read-more {
+                opacity: 1;
+            }
+        }
+        &--hot {
+            width: 66.666%;
+            height: 280px;
+            overflow: hidden;
+
+            @include breakpoint(xs) {
+                width: 100%;
+                height: auto;
+            }
+            #{$this}__text {
+                position: absolute;
+                bottom: 16px;
+                left: 16px;
+                padding: 8px;
+            }
+            #{$this}__link {
+                color: #fff;
+                &:hover {
+                    color: #fff;
+                }
+            }
+            #{$this}__des {
+                color: #fff;
+            }
+        }
+    }
+    &__figure {
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    &__title {
+        margin-top: 8px;
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    &__link {
+        color: $text;
+        &:hover {
+            color: rgba($text, 0.8);
+            #{$this}--read-more {
+                opacity: 1;
+            }
+        }
+        &--read-more {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 8px;
+            transform: translate(-50%, -50%);
+            transition: opacity 500ms ease;
+            border: solid #fff 1px;
+            opacity: 0;
+            background-color: #fff;
+            color: $text;
+            text-transform: uppercase;
+            &:hover {
+                background-color: $text;
+                color: #fff;
+            }
+        }
     }
 }

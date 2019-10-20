@@ -17,148 +17,316 @@
         <div class="logo">
             <span>LOGO</span>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li>
-                    <a href="#">Tour</a>
-                    <ul class="child">
-                        <li><a href="#">Tour 01</a></li>
-                        <li><a href="#">Tour 02</a></li>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Tour</a>
+                    <ul class="nav__list--child">
+                        <li class="nav__item"><a class="nav__link" href="#">Tour 01</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Tour 02</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">Hotels</a>
-                    <ul class="child">
-                        <li><a href="#">Hotels 01</a></li>
-                        <li><a href="#">Hotels 02</a></li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Hotels</a>
+                    <ul class="nav__list--child">
+                        <li class="nav__item"><a class="nav__link" href="#">Hotels 01</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Hotels 02</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Add listing</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Blog</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Add listing</a></li>
             </ul>
         </nav>
     </header>
     <section class="mv">
         <div class="slogan">
-            <div class="slogan_inner"> 
-                <h1>You best trip</h1>
-                <p>We have collected the best offers in 4 250 accommodation options -to see them, just enter the dates!</p>
+            <div class="slogan__inner"> 
+                <h1 class="slogan__title">You best trip</h1>
+                <p class="slogan__des">We have collected the best offers in 4 250 accommodation options -to see them, just enter the dates!</p>
             </div>
         </div>
     </section>
     <main>
         <section>
-            <div class="inner">
-                <div class="form_booking">
-                    <div class="title">
+            <div class="inner inner--clear">
+                <div class="form-booking">
+                    <div class="form-booking__title">
                         <p><span>Booking</span><b>Infomation</b></p>
                     </div>
-                    <div class="item">
-                        <p>I want to</p>
-                        <div class="form-control">
-                            <input type="text" placeholder="Booking a room">
+                    <div class="form-booking__body">
+                        <div class="form-booking__item">
+                            <p>I want to</p>
+                            <div class="form-booking__control">
+                                <input type="text" placeholder="Booking a room">
+                            </div>
+                        </div>
+                        <div class="form-booking__item">
+                            <p>Date</p>
+                            <div class="form-booking__control">
+                                <input type="text" placeholder="yyyy-mm-dd">
+                            </div>
+                        </div>
+                        <div class="form-booking__item">
+                            <p>Duration</p>
+                            <div class="form-booking__control">
+                                <input type="text" placeholder="One night">
+                            </div>
+                        </div>
+                        <div class="form-booking__item">
+                            <p>Guest</p>
+                            <div class="form-booking__control">
+                                <input type="text" placeholder="Number people">
+                            </div>
                         </div>
                     </div>
-                    <span class="item-text">on</span>
-                    <div class="item">
-                        <p>Date</p>
-                        <div class="form-control">
-                            <input type="text" placeholder="yyyy-mm-dd">
-                        </div>
-                    </div>
-                    <span class="item-text">for</span>
-                    <div class="item">
-                        <p>Duration</p>
-                        <div class="form-control">
-                            <input type="text" placeholder="One night">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <p>Guest</p>
-                        <div class="form-control">
-                            <input type="text" placeholder="Number people">
-                        </div>
+                    <div class="form-booking__end">
+                        <button class="form-booking__button" type="submit"></button>
                     </div>
                 </div>
             </div>
         </section>
         <section>
             <div class="inner"> 
-                <h1 class="ttl-h1_why">WHY CHOOSE US?</h1>
+                <div class="title">
+                    <h1 class="title__ttl">WHY CHOOSE US?</h1>
+                </div>
                 <ul class="list-why">
-                    <li>
-                        <figure class="list-why_img">
+                    <li class="list-why__item">
+                        <figure class="list-why__figure">
                             <img src="./public/images/icon_01.png" alt="">
                         </figure>
-                        <h2 class="list-why_title">Diverse Destinations</h2>
-                        <p class="list-why_des">Habitasse. Nunc mollis erat dapibus in commodo eu nisi. Odio purus magnis lorem.</p>
+                        <div class="list-why__text">
+                            <h2 class="list-why__title">Diverse Destinations</h2>
+                            <p class="list-why__des">Habitasse. Nunc mollis erat dapibus in commodo eu nisi. Odio purus magnis lorem.</p>
+                        </div>
                     </li>
-                    <li>
-                        <figure class="list-why_img">
+                    <li class="list-why__item">
+                        <figure class="list-why__figure">
                             <img src="./public/images/icon_02.png" alt="">
                         </figure>
-                        <h2 class="list-why_title">Value for Money</h2>
-                        <p class="list-why_des">Nulla imperdiet dictum laoreet netus. Habitant ullamcorper. Auctor auctor cras.</p>
+                        <div class="list-why__text">
+                            <h2 class="list-why__title">Value for Money</h2>
+                            <p class="list-why__des">Nulla imperdiet dictum laoreet netus. Habitant ullamcorper. Auctor auctor cras.</p>
+                        </div>
                     </li>
-                    <li>
-                        <figure class="list-why_img">
+                    <li class="list-why__item">
+                        <figure class="list-why__figure">
                             <img src="./public/images/icon_03.png" alt="">
                         </figure>
-                        <h2 class="list-why_title">Beautiful Places</h2>
-                        <p class="list-why_des">Eu molestie Purus ac. Facilisis hac in metus nunc parturient ornare consequat enim.</p>
+                        <div class="list-why__text">
+                            <h2 class="list-why__title">Beautiful Places</h2>
+                            <p class="list-why__des">Eu molestie Purus ac. Facilisis hac in metus nunc parturient ornare consequat enim.</p>
+                        </div>
                     </li>
                 </ul>
             </div>
         </section>
         <section>
             <div class="inner">
-                <div class="ttl-block">
-                    <h1 class="ttl-h1_denstination">Popular destination</h1>
-                    <p class="ttl-h1_denstination_des">Discover the coolest local gameplay</p>
+                <div class="title">
+                    <h1 class="title__ttl">POPULAR DESTINATION</h1>
+                    <p class="title__des">Discover the coolest local gameplay</p>
                 </div>
-                <div class="box-type-01">
-                    <div class="box-type-01_item">
-                        <a href="#">
-                            <p>2 Day/3 night Start $500</p>
-                            <h2>Da Nang, Viet Nam</h2>
+                <div class="box-type01">
+                    <div class="box-type01__item">
+                        <a href="#" class="box-type01__link">
+                            <figure class="box-type01__figure">
+                                <img class="box-type01__img-zoom" src="./public/images/image_05.png" alt="">
+                            </figure>
+                            <div class="box-type01__text">
+                                <p class="box-tye-01__price">2 Day/3 night Start $500</p>
+                                <h2 class="box-type01__local">Da Nang, Viet Nam</h2>
+                            </div>
                         </a>
                     </div>
-                    <div class="box-type-01_item">
-                        <a href="#">
-                            <p>2 Day/3 night Start $500</p>
-                            <h2>Hawaii</h2>
+                    <div class="box-type01__item">
+                        <a href="#" class="box-type01__link">
+                            <figure class="box-type01__figure">
+                                <img class="box-type01__img-zoom" src="./public/images/image_06.png" alt="">
+                            </figure>
+                            <div class="box-type01__text">
+                                <p class="box-tye-01__price">2 Day/3 night Start $500</p>
+                                <h2 class="box-type01__local">Hawaii</h2>
+                            </div>
                         </a>
                     </div>
-                    <div class="box-type-01_item">
-                        <a href="#">
-                            <p>2 Day/3 night Start $500</p>
-                            <h2>Paris, France</h2>
+                    <div class="box-type01__item">
+                        <a href="#" class="box-type01__link">
+                            <figure class="box-type01__figure">
+                                <img class="box-type01__img-zoom" src="./public/images/image_07.png" alt="">
+                            </figure>
+                            <div class="box-type01__text">
+                                <p class="box-tye-01__price">2 Day/3 night Start $500</p>
+                                <h2 class="box-type01__local">Paris, France</h2>
+                            </div>
                         </a>
                     </div>
-                    <div class="box-type-01_item">
-                        <a href="#">
-                            <p>2 Day/3 night Start $500</p>
-                            <h2>Berlin, Germany</h2>
+                    <div class="box-type01__item">
+                        <a href="#" class="box-type01__link">
+                            <figure class="box-type01__figure">
+                                <img class="box-type01__img-zoom" src="./public/images/image_08.png" alt="">
+                            </figure>
+                            <div class="box-type01__text">
+                                <p class="box-tye-01__price">2 Day/3 night Start $500</p>
+                                <h2 class="box-type01__local">Berlin, Germany</h2>
+                            </div>
                         </a>
                     </div>
-                    <div class="box-type-01_item">
-                        <a href="#">
-                            <p>2 Day/3 night Start $500</p>
-                            <h2>Tokio, Japan</h2>
+                    <div class="box-type01__item">
+                        <a href="#" class="box-type01__link">
+                            <figure class="box-type01__figure">
+                                <img class="box-type01__img-zoom" src="./public/images/image_09.png" alt="">
+                            </figure>
+                            <div class="box-type01__text">
+                                <p class="box-tye-01__price">2 Day/3 night Start $500</p>
+                                <h2 class="box-type01__local">Tokio, Japan</h2>
+                            </div>
                         </a>
                     </div>
-                    <div class="box-type-01_item">
-                        <a href="#">
-                            <p>2 Day/3 night Start $500</p>
-                            <h2>BangKok, Thai Lan</h2>
+                    <div class="box-type01__item">
+                        <a href="#" class="box-type01__link">
+                            <figure class="box-type01__figure">
+                                <img class="box-type01__img-zoom" src="./public/images/image_10.png" alt="">
+                            </figure>
+                            <div class="box-type01__text">
+                                <p class="box-tye-01__price">2 Day/3 night Start $500</p>
+                                <h2 class="box-type01__local">BangKok, Thai Lan</h2>
+                            </div>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+        <section>
+            <div class="video">
+                <div class="video__text">
+                    <h1 class="video__title">Everest - The Summit Climb</h1>
+                    <p class="video__des">What it's really like to climb Everest?</p>
+                    <a href="#" class="video__link--modal"></a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="inner">
+                <div class="title">
+                    <h1 class="title__ttl">WEEKEND GETAWAYS & VACATION IDEAS</h1>
+                </div>
+                <div class="new">
+                    <div class="new__item new__item--hot">
+                        <figure class="new__figure">
+                            <img src="public/images/image_13.jpg" alt="">
+                        </figure>
+                        <div class="new__text">
+                            <h1 class="new__title"><a href="#" class="new__link">25 Best Places to Visit in New England</a></h1>
+                            <p class="new__des">There are many New England cities and places to visit, some which are national parks offering seemingly endless hiking and exploration options</p>
+                        </div>
+                    </div>
+                    <div class="new__item">
+                        <figure class="new__figure">
+                            <img src="public/images/image_12.jpg" alt="">
+                            <a href="#" class="new__link--read-more">Read more</a>
+                        </figure>
+                        <h1 class="new__title"><a href="#" class="new__link">25 Most Beautiful Places in the World</a></h1>
+                        <p class="new__des">Most beautiful places in the world include international destinations like</p>
+                    </div>
+                    <div class="new__item">
+                        <figure class="new__figure">
+                            <img src="public/images/image_14.jpg" alt="">
+                            <a href="#" class="new__link--read-more">Read more</a>
+                        </figure>
+                        <h1 class="new__title"><a href="#" class="new__link">Provincetown, Massachusetts 25 Best Weekend Getaways from New York City</a></h1>
+                        <p class="new__des">Most beautiful places in the world include international destinations like</p>
+                    </div>
+                    <div class="new__item">
+                        <figure class="new__figure">
+                            <img src="public/images/image_15.jpg" alt="">
+                            <a href="#" class="new__link--read-more">Read more</a>
+                        </figure>
+                        <h1 class="new__title"><a href="#" class="new__link">25 Best Places to Visit in September</a></h1>
+                        <p class="new__des">Mmany destinations that rely on visitors to fuel their economy offer</p>
+                    </div>
+                    <div class="new__item">
+                        <figure class="new__figure">
+                            <img src="public/images/image_16.jpg" alt="">
+                            <a href="#" class="new__link--read-more">Read more</a>
+                        </figure>
+                        <h1 class="new__title"><a href="#" class="new__link">Top 25 Romantic Weekend Getaways</a></h1>
+                        <p class="new__des">A trip to a relaxing resort or an inn can rekindle the romance that has taken a back seat to hurried daily life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <div class="inner">
+            <div class="box-footer01">
+                <div class="social">
+                    <div class="social__item">
+                        <a class="social__link"><img src="./public/images/icon_fa.png" alt=""></a>
+                    </div>
+                    <div class="social__item">
+                        <a class="social__link"><img src="./public/images/icon_skype.png" alt=""></a>
+                    </div>
+                    <div class="social__item">
+                        <a class="social__link"><img src="./public/images/icon_youtube.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="email">
+                    <div class="email__text">
+                        <p class="email__text__p">Travel discounts up to 60% off sent straight to your inbox</p>
+                        <p class="email__text__p">By clicking Subscribe, you have agreed to our Terms & Conditions and Privacy Policy</p>
+                    </div>
+                    <div class="email__form">
+                        <input class="email__input" type="text" placeholder="Please input email">
+                        <button class="email__button" type="submit">
+                            <img class="email__button--img" class="" src="./public/images/icon_send.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footer__hr">
+        <div class="inner">
+            <div class="box-footer02">
+                <div class="developer">
+                    <p class="developer__p">© 2019. Developer by VietHQ</p>
+                </div>
+                <div class="Blink">
+                    <ul class="Blink__item">
+                        <li class="Blink__name">ABOUT</li>
+                        <li><a class="Blink__link" href="#">About us</a></li>
+                        <li><a class="Blink__link" href="#">Press Releases</a></li>
+                        <li><a class="Blink__link" href="#">Patner With Us</a></li>
+                        <li><a class="Blink__link" href="#">Careers</a></li>
+                    </ul>
+                    <ul class="Blink__name">
+                        <li class="Blink__name">PARTNERSHIPS</li>
+                        <li><a class="Blink__link" href="#">Partner Login</a></li>
+                        <li><a class="Blink__link" href="#">Affiliate Partnership</a></li>
+                        <li><a class="Blink__link" href="#">Influencer Program</a></li>
+                        <li><a class="Blink__link" href="#">Agent Marketplace</a></li>
+                    </ul>
+                    <ul class="Blink__name">
+                        <li class="Blink__name">TERMS OF USE</li>
+                        <li><a class="Blink__link" href="#">Terms And Conditions</a></li>
+                        <li><a class="Blink__link" href="#">Privacy Policy</a></li>
+                        <li><a class="Blink__link" href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="pay">
+                    <h1 class="pay__title">PAYMENT CHANNEL</h1>
+                    <ul class="pay__list">
+                        <li class="pay__item"><a href="#"><img class="pay__img" src="./public/images/pay_01.png" alt=""></a></li>
+                        <li class="pay__item"><a href="#"><img class="pay__img" src="./public/images/pay_02.png" alt=""></a></li>
+                        <li class="pay__item"><a href="#"><img class="pay__img" src="./public/images/pay_03.png" alt=""></a></li>
+                        <li class="pay__item"><a href="#"><img class="pay__img" src="./public/images/pay_04.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
   </body>
 </html>
