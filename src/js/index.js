@@ -1,25 +1,39 @@
 import '../scss/index.scss';
-
-// var nav = $('.nav');
-// var xs = 768;
-// var windown = $(windown).width();
-
+var xs = 768;
+var w = $(window).innerWidth();
 function addIconMenu() {
-  $('.nav__list--child').each(function(i, obj) {
-    console.log(obj);
-    $(obj)
-      .parent()
-      .append('<i class="icon"><span></span></i>')
-      .children()
-      .on('click', function() {
-        $('.nav__list--child').removeClass('active');
-        $(this)
-          .prev()
-          .addClass('active');
-      });
-  });
+    $('.nav__list--child').each(function(i, obj) {
+        $(obj)
+            .parent()
+            .append('<i class="icon"><span></span></i>');
+    });
 }
 
 $(function() {
-  addIconMenu();
+    addIconMenu();
+    $('.icon').on('click', function() {
+        var active = $(this);
+        if (active.hasClass('active')) {
+            active
+                .removeClass('active')
+                .prev()
+                .removeClass('active');
+        } else {
+            $('.nav__list--child, .icon').removeClass('active');
+            active
+                .addClass('active')
+                .prev()
+                .addClass('active');
+        }
+    });
+    $('.icon-menu-sp').on('click', function() {
+        $(this).toggleClass('open');
+        $('.nav').slideToggle();
+    });
+});
+$(window).resize(function() {
+    console.log(w);
+    if (w > xs) {
+        $('.nav').css('display', 'flex');
+    }
 });
