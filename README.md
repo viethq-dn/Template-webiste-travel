@@ -23,6 +23,7 @@ Before start you need to have installed _npm_.
 **A few simple steps to start:**
 * Install dependencies from `package.json` by running: `npm install`.
 * `npm start` 
+* open url [localhost:3001](http://localhost:3001)
 
 #### Build
 
